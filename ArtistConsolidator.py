@@ -3,24 +3,20 @@ from beets.plugins import BeetsPlugin
 from beets.importer import action
 from beets.ui import Subcommand
 
-class ModifyArtistPlugin(BeetsPlugin):
+class ArtistConsolidatorPlugin(BeetsPlugin):
     def __init__(self):
-        super(ModifyArtistPlugin, self).__init__()
-
+        super(ArtistConsolidatorPlugin, self).__init__()
+        self.config.add({
+            'mappings': []
+        })
         self.import_stages = [self.imported]
         self.register_listener('import_task_choice', self.modify)
 
     def modify(self, session, task):
+        mappings = self.config['mappings'].as_pairs()
         if task.choice_flag == action.APPLY:
             for item in task.items:
-                if item.albumartist in ["Prince & 3rdEyeGirl", 
-                                        "Prince & The New Power Generation", 
-                                        "Prince & The Revolution", 
-                                        "Prince And The Revolution", 
-                                        "Prince and The Revolution", 
-                                        "The Artist (Formerly Known As Prince)"]:
-                    item.albumartist = "Prince"
-                    item.store()
-                elif item.albumartist in ["The Jimi Hendrix Experience", "Band of Gypsys"]:
-                    item.albumartist = "Jimi Hendrix"
-                    item.store()
+                for original_names, new_name in mappings:
+                    if item.albumartist in original_names:
+                        item.albumartist = new_name
+                        item.store()
