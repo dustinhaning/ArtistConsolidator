@@ -6,11 +6,17 @@ Right now it just works for Prince and Jimi Hendrix because these were the ones 
 For example, my library import originally created the following folders:
 
 Prince
+
 Prince & 3rdEyeGirl
+
 Prince & The New Power Generation
+
 Prince & The Revolution
+
 Prince And The Revolution
+
 Prince and The Revolution
+
 The Artist (Formerly Known As Prince)
 
 This is obviously not ideal for keeping a tidy library. This plugin will change the album artist value for all of these to just 'Prince' so they are all consolidated into one folder.
