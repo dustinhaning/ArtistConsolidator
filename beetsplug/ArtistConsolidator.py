@@ -10,7 +10,7 @@ class ArtistConsolidatorPlugin(BeetsPlugin):
         self.config.add({
             'artist_dict': {}
         })
-        self.artist_dict = self.config['artist_dict']  # Use it directly
+        self.artist_dict = self.config['artist_dict']
 
         self.register_listener('import_task_choice', self.consolidate_artists)
 
@@ -26,7 +26,7 @@ class ArtistConsolidatorPlugin(BeetsPlugin):
                     if item.albumartist == original:
                         log.info(f"Changing albumartist from {original} to {consolidated}")
                         item.albumartist = consolidated
-                        item.artist = consolidated  # If you want to update the artist field too
+                        item.artist = consolidated
                         item.store()
         else:
             # If it's a singleton, update the albumartist and artist fields for the item only.
@@ -35,5 +35,5 @@ class ArtistConsolidatorPlugin(BeetsPlugin):
                     if item.albumartist == original:
                         log.info(f"Changing albumartist from {original} to {consolidated}")
                         item.albumartist = consolidated
-                        item.artist = consolidated  # If you want to update the artist field too
+                        item.artist = consolidated 
                         item.store()
