@@ -23,6 +23,7 @@ This is obviously not ideal for keeping a tidy library. This plugin will change 
 To install, copy the file ArtistConsolidator.py to your beetsplug folder (if you don't have one, you can create one) and add 'ArtistConsolidator' to your list of plugins in config.yaml. More details on this are available here: https://beets.readthedocs.io/en/stable/dev/plugins.html
 
 In your config.yaml file, add the following lines. This example shows Prince and Jimi Hendrix, obviously you can add as many as you need. 
+
 ```
 ArtistConsolidator:
     artist_mapping:
@@ -36,7 +37,7 @@ ArtistConsolidator:
         "Band of Gypsys": "Jimi Hendrix"
 ```
 
-Note, the quotation marks are not taken literally, so in the event that you need to include an artist name that includes quotation marks, you can use escape characters in 1 of 2 ways:
+Note: Quotes are technically not needed most of the time, but certain things like colons, numbers, and boolans like Yes, No, True, or False, and Null have special uses in .yaml files, and there's a chance they could be in a band or artist name. So it's best practice to just use quotes. However, in the event that you need to include an artist name that includes quotation marks, you can use escape characters in 1 of 2 ways with either \ or by using single quotes and double quotes:
 
 ```
 "\"Artist Name\""
