@@ -1,26 +1,39 @@
-#!/usr/bin/env python3
-# File: beetsplug/ArtistConsolidator.py
 from beets.plugins import BeetsPlugin
-from beets.importer import action
-from beets.ui import Subcommand
+from beets import config
+import logging
+
+log = logging.getLogger('beets.ArtistConsolidator')
 
 class ArtistConsolidatorPlugin(BeetsPlugin):
     def __init__(self):
         super(ArtistConsolidatorPlugin, self).__init__()
+        self.config.add({
+            'artist_dict': {}
+        })
+        self.artist_dict = self.config['artist_dict']  # Use it directly
 
         self.register_listener('import_task_choice', self.consolidate_artists)
 
-    def commands(self):
-        cmd = Subcommand('consolidate_artists',
-                         help='rename artist variants to a single name')
-        return [cmd]
-
     def consolidate_artists(self, session, task):
-        if task.choice_flag is action.ASIS:
-            return
+        if task.is_album:
+            for item in task.items:
+                # Check if this item is a part of a compilation
+                if item.get('comp', False):
+                    # This item is a part of a compilation, skip it
+                    continue
 
-        artist_name_mapping = self.config['artist_mapping'].get(dict)
-        for key in artist_name_mapping:
-            if task.albumartist == key:
-                task.albumartist = artist_name_mapping[key]
-                self._log.info(u'Changed album artist to: {0}', task.albumartist)
+                for original, consolidated in self.artist_dict.items():
+                    if item.albumartist == original:
+                        log.info(f"Changing albumartist from {original} to {consolidated}")
+                        item.albumartist = consolidated
+                        item.artist = consolidated  # If you want to update the artist field too
+                        item.store()
+        else:
+            # If it's a singleton, update the albumartist and artist fields for the item only.
+            for item in task.items:
+                for original, consolidated in self.artist_dict.items():
+                    if item.albumartist == original:
+                        log.info(f"Changing albumartist from {original} to {consolidated}")
+                        item.albumartist = consolidated
+                        item.artist = consolidated  # If you want to update the artist field too
+                        item.store()
