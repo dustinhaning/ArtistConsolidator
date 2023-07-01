@@ -30,7 +30,6 @@ class ArtistConsolidatorPlugin(BeetsPlugin):
                         item.albumartist = consolidated
                         if self.update_track_artists:
                             item.artist = consolidated  # Update track artist only if option is set to True
-                        item.store()
         else:
             # If it's a singleton, update the albumartist fields for the item only.
             for item in task.items:
@@ -40,4 +39,3 @@ class ArtistConsolidatorPlugin(BeetsPlugin):
                         item.albumartist = consolidated
                         if self.update_track_artists:
                             item.artist = consolidated  # Update track artist only if option is set to True
-                        item.store()
