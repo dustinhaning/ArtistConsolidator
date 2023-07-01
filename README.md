@@ -14,7 +14,7 @@ The Artist (Formerly Known As Prince)
 ```
 This is obviously not ideal for keeping a tidy library. This plugin will change the album artist value for all of these to just 'Prince' so they are all consolidated into one folder.
 
-This can also be useful for split albums that have 2 album artists, if you want to have it go to one artist folder.
+This can also be useful for split albums that have multiple album artists, if you want to have it go to one artist folder.
 
 For example, in my library I had these 2 artist folders because they had a split album:
 ```
