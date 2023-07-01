@@ -5,17 +5,11 @@ Simple Beets Plugin to Consolidate Artists and Bands that have gone by several d
 For example, my library import originally created the following folders:
 ```
 Prince
-
 Prince & 3rdEyeGirl
-
 Prince & The New Power Generation
-
 Prince & The Revolution
-
 Prince And The Revolution
-
 Prince and The Revolution
-
 The Artist (Formerly Known As Prince)
 ```
 This is obviously not ideal for keeping a tidy library. This plugin will change the album artist value for all of these to just 'Prince' so they are all consolidated into one folder.
@@ -29,7 +23,7 @@ Fit for an Autopsy _ Thy Art Is Murder _ Malevolence
 ```
 Lastly, for Classical albums, you may want to have them in folders for the original composor, the performance composor, or the perfomance ensemble.
 
-For Example this album https://www.discogs.com/release/12419841-Georg-Friedrich-H%C3%A4ndel-LArte-DellArco-Federico-Guglielmo-Water-Music-Music-For-The-Royal-Fireworks
+For Example the ablum ["Water Music • Music For The Royal Fireworks" by Georg Friedrich Händel / L'Arte Dell'Arco, Federico Guglielmo](https://www.discogs.com/release/12419841-Georg-Friedrich-H%C3%A4ndel-LArte-DellArco-Federico-Guglielmo-Water-Music-Music-For-The-Royal-Fireworks)
 
 By default, Beets created an artist folder like this:
 ```
