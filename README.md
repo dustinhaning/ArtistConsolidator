@@ -43,3 +43,5 @@ Note: Quotes are technically not needed most of the time, but certain things lik
 "\"Artist Name\""
 '"Artist Name"'
 ```
+
+This is beta software and I haven't been able to test every scenario and I don't know how it will interact with other plugins, so proceed with caution. 
