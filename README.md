@@ -3,7 +3,7 @@
 Simple Beets Plugin to Consolidate Artists and Bands that have gone by several different names into 1 folder.
 
 For example, my library import originally created the following folders:
-
+```
 Prince
 
 Prince & 3rdEyeGirl
@@ -17,9 +17,32 @@ Prince And The Revolution
 Prince and The Revolution
 
 The Artist (Formerly Known As Prince)
-
+```
 This is obviously not ideal for keeping a tidy library. This plugin will change the album artist value for all of these to just 'Prince' so they are all consolidated into one folder.
 
+This can also be useful for split albums that have 2 album artists, if you want to have it go to one artist folder.
+
+For example, in my library I had these 2 artist folders because they had a split album:
+```
+Fit for an Autopsy
+Fit for an Autopsy _ Thy Art Is Murder _ Malevolence
+```
+Lastly, for Classical albums, you may want to have them in folders for the original composor, the performance composor, or the perfomance ensemble.
+
+For Example this album https://www.discogs.com/release/12419841-Georg-Friedrich-H%C3%A4ndel-LArte-DellArco-Federico-Guglielmo-Water-Music-Music-For-The-Royal-Fireworks
+
+By default, Beets created an artist folder like this:
+```
+George Frideric Handel; L'Arte dell'Arco, Federico Guglielmo
+```
+Instead, I can use this plugin to have this go to any of these folders, depending on preferences:
+```
+George Frideric Handel
+Handel
+L'Arte dell'Arco, Federico Guglielmo
+L'Arte dell'Arco
+Federico Guglielmo
+```
 To install, copy the file ArtistConsolidator.py to your beetsplug folder (if you don't have one, you can create one) and add 'ArtistConsolidator' to your list of plugins in config.yaml. More details on this are available here: https://beets.readthedocs.io/en/stable/dev/plugins.html
 
 In your config.yaml file, add the following lines. This example shows Prince and Jimi Hendrix, obviously you can add as many as you need. The first name is the original name and the second one is what you want to change it to.
