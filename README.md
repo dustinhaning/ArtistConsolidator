@@ -22,7 +22,7 @@ This is obviously not ideal for keeping a tidy library. This plugin will change 
 
 To install, copy the file ArtistConsolidator.py to your beetsplug folder (if you don't have one, you can create one) and add 'ArtistConsolidator' to your list of plugins in config.yaml. More details on this are available here: https://beets.readthedocs.io/en/stable/dev/plugins.html
 
-In your config.yaml file, add the following lines. This example shows Prince and Jimi Hendrix, obviously you can add as many as you need. 
+In your config.yaml file, add the following lines. This example shows Prince and Jimi Hendrix, obviously you can add as many as you need. The first name is the original name and the second one is what you want to change it to.
 
 ```
 ArtistConsolidator:
