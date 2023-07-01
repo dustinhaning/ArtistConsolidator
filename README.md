@@ -73,3 +73,5 @@ artistconsolidator:
     update_track_artists: true
 ```
 This is beta software and I haven't been able to test every scenario and I don't know how it will interact with other plugins, so proceed with caution. 
+
+Also, this won't 'fix' albums that have already been imported, rather it will just end up creating duplicate albums under the artist name that you specify. You can either delete the duplicate artist folders after the import is done, or remove those albums from your beets database and library, and import them again from scratch.
