@@ -26,7 +26,7 @@ And if you have your library on a Linux system, you may see separate folders get
 Queens Of The Stone Age
 Queens of the Stone Age
 ```
-Lastly, for Classical albums, you may want to have them in folders for the original composor, the performance composor, or the perfomance ensemble.
+Lastly, for Classical albums, you may want to have them in folders for the original composer, the performance composer, or the perfomance ensemble.
 
 For Example the ablum ["Water Music • Music For The Royal Fireworks" by Georg Friedrich Händel / L'Arte Dell'Arco, Federico Guglielmo](https://www.discogs.com/release/12419841-Georg-Friedrich-H%C3%A4ndel-LArte-DellArco-Federico-Guglielmo-Water-Music-Music-For-The-Royal-Fireworks)
 
