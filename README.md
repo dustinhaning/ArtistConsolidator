@@ -21,6 +21,11 @@ For example, in my library I had these 2 artist folders because they had a split
 Fit for an Autopsy
 Fit for an Autopsy _ Thy Art Is Murder _ Malevolence
 ```
+And if you have your library on a Linux system, you may see separate folders get created because of case sensitivity. You can use this plugin to fix that, for example:
+```
+Queens Of The Stone Age
+Queens of the Stone Age
+```
 Lastly, for Classical albums, you may want to have them in folders for the original composor, the performance composor, or the perfomance ensemble.
 
 For Example the ablum ["Water Music • Music For The Royal Fireworks" by Georg Friedrich Händel / L'Arte Dell'Arco, Federico Guglielmo](https://www.discogs.com/release/12419841-Georg-Friedrich-H%C3%A4ndel-LArte-DellArco-Federico-Guglielmo-Water-Music-Music-For-The-Royal-Fireworks)
