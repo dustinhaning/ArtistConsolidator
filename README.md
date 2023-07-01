@@ -26,7 +26,7 @@ In your config.yaml file, add the following lines. This example shows Prince and
 
 ```
 ArtistConsolidator:
-    artist_mapping:
+    artist_dict:
         "The Artist (Formerly Known As Prince)": "Prince"
         "Prince & 3rdEyeGirl": "Prince"
         "Prince & The New Power Generation": "Prince"
