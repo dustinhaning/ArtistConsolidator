@@ -65,7 +65,7 @@ Note: Quotes are technically not needed most of the time, but certain things lik
 "\"Artist Name\""
 '"Artist Name"'
 ```
-Lastly, by default, this plugin will only update the album artist field, it will will the 'artist' field alone. This is important if you're importing a split album, which actually has tracks from other artists, but you still want it to be in one folder. You wouldn't want the track artist to be inaccurate. If you use Room for your library, it will also handle consolidating things as needed, so you don't need to mess with the artist field.
+Lastly, by default, this plugin will only update the album artist field, it will leave the 'artist' field alone. This is important if you're importing a split album, which actually has tracks from other artists, but you still want it to be in one folder. You wouldn't want the track artist to be inaccurate. If you use Room for your library, it will also handle consolidating things as needed, so you don't need to mess with the artist field.
 
 However if you do want to update the artist field as well, you can add this line to config.yaml and set it to true. Use with caution as it may have unintended consequences on your beets database. I would recommend leaving it off and only enabling it for imports that you know it won't break things.
 ```
